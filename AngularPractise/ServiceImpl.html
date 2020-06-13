@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Implementation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="ServiceImpl.js"></script>
+</head>
+<body ng-app="svc" ng-controller="svcCtrl">
+    <div>
+        <p>Enter a number:</p>
+        <input type="text" ng-model="square"><br><br>
+        <button type="submit" ng-click="multSvc()">Service Square</button><br><br>
+        <button type="submit" ng-click="multFac()">Factory Square</button><br><br>
+        <button type="submit" ng-click="multProv()">Provider Square</button><br><br>
+        <button type="submit" ng-click="multSS()">Serv/serv Square</button><br><br>
+        <p>{{squareOfNum}}</p>
+    </div>
+    
+</body>
+</html>

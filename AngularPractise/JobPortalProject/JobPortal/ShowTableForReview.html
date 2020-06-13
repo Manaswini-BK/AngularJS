@@ -1,0 +1,67 @@
+<div ng-class="{'info': true}">Review the information provided before submitting the application.</div><br><br>
+<table ng-class="{'outer':true}">
+    <tr>
+        <td>Personal Details</td>
+        <td>
+            <table ng-class="{'inner':true}">
+                <tr>
+                    <td>Name: {{tableDataForPersonalData.fname}} {{tableDataForPersonalData.lname}}</td>
+                </tr>
+                <tr>
+                    <td>Gender: {{tableDataForPersonalData.gender}}</td>
+                </tr>
+                <tr>
+                    <td>Phone: {{tableDataForPersonalData.phone}}</td>
+                </tr>
+                <tr>
+                    <td>Email: {{tableDataForPersonalData.email}}</td>
+                </tr>
+                <tr>
+                    <td>Current City: {{tableDataForPersonalData.city}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Educational Details</td>
+        <td>
+            <table ng-class="{'inner':true}">
+                <tr>
+                    <td>Highest Degree: {{tableDataForEducationalData.degree}}</td>
+                </tr>
+                <tr>
+                    <td>Stream/Branch: {{tableDataForEducationalData.stream}}</td>
+                </tr>
+                <tr>
+                    <td>University/College: {{tableDataForEducationalData.college}}</td>
+                </tr>
+                <tr>
+                    <td>Year of commencement: {{tableDataForEducationalData.startYear | date: "MMMM yyyy" }}</td>
+                </tr>
+                <tr>
+                    <td>Year of completion: {{tableDataForEducationalData.endYear | date: "MMMM yyyy" }}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td>Professional Details</td>
+        <td>
+            <table ng-class="{'inner':true}">
+                <tr>
+                    <td>Current Company: {{tableDataForProfessionalData.company}}</td>
+                </tr>
+                <tr>
+                    <td>Working from: {{tableDataForProfessionalData.date | date: "MMMM yyyy"}}</td>
+                </tr>
+                <tr>
+                    <td style="word-break: break-word;width: 300px;">Job Description: {{tableDataForProfessionalData.jd}}</td>
+                </tr>
+                <tr>
+                    <td>Resume Uploaded: {{tableDataForProfessionalData.resume}}</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<br><br>

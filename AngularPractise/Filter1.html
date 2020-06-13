@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Filter1.js"></script>
+</head>
+<body ng-app="filterImpl" ng-controller="filter1Ctrl">
+    <ul>
+        <li ng-repeat="person in namesArray | filterName ">{{person.name}}</li>
+    </ul>
+</body>
+</html>

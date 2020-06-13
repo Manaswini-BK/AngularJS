@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="Form.js"></script>
+    <style>
+        table,tr{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body ng-app="myForm" ng-controller="formCtrl">
+    <form name="form">
+        <label>Name:</label>
+        <input type="text" name="person.name"ng-model="person.name" required><br><br>
+        <span style = "color:red" ng-show = "form.person.name.$dirty && form.person.name.$invalid">
+            <span ng-show = "form.person.name.$error.required">First Name is required.</span>
+         </span>
+        <label>Phone:</label>
+        <input type="number" ng-model="person.phone" required><br><br>
+        <label>Email:</label>
+        <input type="email" ng-model="person.email" required><br><br>
+        <label>Gender:</label><br>
+        Male<input type="radio" ng-model="person.gender" ng-value="'Male'">
+        Female<input type="radio" ng-model="person.gender" ng-value="'Female'">
+        <br><br>
+        <label>City:</label>
+        <select ng-model="person.city">
+            <option>Bengaluru</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Hyderabad</option>
+            <option>Pune</option>
+        </select>
+        <br><br>
+        <label>Interests:</label><br>
+        <input type="checkbox" ng-model="person.cooking" ng-value="'Cooking'"> Cooking<br>
+        <input type="checkbox" ng-model="person.reading" ng-value="'Reading'"> Reading <br>
+        <input type="checkbox" ng-model="person.writing" ng-value="'Writing'"> Writing<br>
+        <input type="checkbox" ng-model="person.painting" ng-value="'Painting'"> Painting<br>
+        <input type="checkbox" ng-model="person.travelling" ng-value="'Travelling'">Travelling <br>
+        <br><br>
+        <button type="submit" ng-click="submit()">Submit</button> <br><br>
+        <button type="reset" ng-click="reset()">Reset</button>
+    </form>
+    <br><br>
+    <p ng-if="showtable">You submitted the following Information</p><br><br>
+    <table ng-if="showtable">
+        <tr>
+            <td>Name</td>
+            <td>{{data.name}}</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>{{data.phone}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{data.email}}</td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>{{data.gender}}</td>
+        </tr>
+        <tr>
+            <td>City</td>
+            <td>{{data.city}}</td>
+        </tr>
+        <tr>
+            <td>Intersets</td>
+            <td>{{data.interests}}</td>
+        </tr>
+    </table>
+</body>
+</html>

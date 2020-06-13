@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routing Example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <style>
+        a{
+            text-decoration: none;
+            color:white;
+            position: relative;
+            background-color: gray;
+            border: 1px solid black;
+            font-size: 20px;
+            top: 25px;
+        }
+        #view{
+            position: relative;
+            top: 30px;
+        }
+    </style>
+</head>
+<body ng-app="myRouteApp">
+        <a href="#!BasicsOfAngular/1">AngularJS Basics</a> &nbsp;
+        <a href="#!AngularController">Controller in Angular JS</a> &nbsp;
+        <a href="#!Directives">Directive in Angular JS</a>
+    <br><br>
+    <div id="view" ng-view></div>
+    <script src="Routing.js"></script>
+    <script src="Directives.js"></script>
+    <script src="AngularController.js"></script>
+</body>
+</html>

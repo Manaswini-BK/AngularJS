@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.js"></script>
+    <link rel="stylesheet" type="text/css" href="JobPortal.css">
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div ng-class="{'welcome':true}">Welcome to the Job Portal !!</div>
+    <br>
+    <div ng-class="{'info': true}">Please fill the following details. If we find you a good match for the position, our team will contact you.</div>
+    <hr ng-class="{'separators': true}">
+    <div ng-class="{'sectionContainer':true}">
+        <personal-details ng-messages prsnl-det="prsnlDet"></personal-details>
+        <hr>
+        <educational-details edu-det= "eduDet"></educational-details>
+        <hr>
+        <professional-details prof-det="profDet"></professional-details>
+    </div>
+    <hr ng-class="{'separators': true}">
+    <button  ng-class="{'button':true}" ng-click="showTable()" type="submit">Review</button> &nbsp; &nbsp;
+    <button ng-class="{'button':true}" ng-click="reset()" type="reset">Reset</button><br><br>
+    <display-table
+        ng-if="showTableData"
+        table-data-for-personal-data="prsnlDet"
+        table-data-for-educational-data="eduDet"
+        table-data-for-professional-data="profDet">
+    </display-table>
+    <p></p>
+    <script src="JobPortal.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<div ng-class="{'heading':true}">Professional Details</div>
+<br>
+<div ng-class="{'sections':true}">
+    Current Company: <input type="text" ng-model="profDet.company" required><br><br>
+    Working from: <input type="month" ng-model="profDet.date" required><br><br>
+    <label>Job Description:</label><br>
+    <textarea maxlength="1000" rows="8" cols="40" style="resize: none;" ng-model="profDet.jd"></textarea><br><br>
+    Upload Resume: <input type="file" id="file" ng-model="profDet.resume"><br><br>
+</div>

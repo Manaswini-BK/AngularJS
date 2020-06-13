@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        #div1{
+            width: max-width;
+            background-color: aqua;
+            font-size: 24px;
+            font-family: 'Lucida Sans';
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+    <div>
+        <label>Gender</label>
+        <select ng-model="selectedGender">
+            <option ng-repeat="x in gender">{{x}}</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label>City</label>
+        <select ng-model="selectedCity">
+            <option ng-repeat="x in city">{{x}}</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label>Current position</label>
+        <select  ng-model="selectedCP" ng-options="x for x in cp"></select>
+    </div>
+    <br>
+    <div>
+        <button type="submit" ng-click="details()">Submit</button>
+    </div>
+    <br>
+    <div id="div1" ng-show="show">
+        <p>Gender: {{displayGender | uppercase}}</p>
+        <p>City: {{displayCity | uppercase}}</p>
+        <p>Current position: {{displayCP | uppercase}}</p>
+    </div>
+    <script src="PracticeAngular.js"></script>
+</body>
+</html>
